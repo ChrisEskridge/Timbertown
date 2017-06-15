@@ -1,0 +1,2962 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TimberTown</title>
+
+
+
+
+
+
+<style media="screen" type="text/css">
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
+@font-face {
+    font-family: 'novecento_slab_condensenormal';
+    src: url('Novecentoslabcondensed-Normal-webfont.eot');
+    src: url('Novecentoslabcondensed-Normal-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Novecentoslabcondensed-Normal-webfont.woff2') format('woff2'),
+         url('Novecentoslabcondensed-Normal-webfont.woff') format('woff'),
+         url('Novecentoslabcondensed-Normal-webfont.ttf') format('truetype'),
+         url('Novecentoslabcondensed-Normal-webfont.svg#novecento_slab_condensenormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'novecento_sans_widelight';
+    src: url('Novecentosanswide-Light-webfont.eot');
+    src: url('Novecentosanswide-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Novecentosanswide-Light-webfont.woff2') format('woff2'),
+         url('Novecentosanswide-Light-webfont.woff') format('woff'),
+         url('Novecentosanswide-Light-webfont.ttf') format('truetype'),
+         url('Novecentosanswide-Light-webfont.svg#novecento_sans_widelight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'novecento_slab_widenormal';
+    src: url('Novecentoslabwide-Normal-webfont.eot');
+    src: url('Novecentoslabwide-Normal-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Novecentoslabwide-Normal-webfont.woff2') format('woff2'),
+         url('Novecentoslabwide-Normal-webfont.woff') format('woff'),
+         url('Novecentoslabwide-Normal-webfont.ttf') format('truetype'),
+         url('Novecentoslabwide-Normal-webfont.svg#novecento_slab_widenormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'novecento_sans_widemedium';
+    src: url('Novecentosanswide-Medium-webfont.eot');
+    src: url('Novecentosanswide-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Novecentosanswide-Medium-webfont.woff2') format('woff2'),
+         url('Novecentosanswide-Medium-webfont.woff') format('woff'),
+         url('Novecentosanswide-Medium-webfont.ttf') format('truetype'),
+         url('Novecentosanswide-Medium-webfont.svg#novecento_sans_widemedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'novecento_sans_widenormal';
+    src: url('Novecentosanswide-Normal-webfont.eot');
+    src: url('Novecentosanswide-Normal-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Novecentosanswide-Normal-webfont.woff2') format('woff2'),
+         url('Novecentosanswide-Normal-webfont.woff') format('woff'),
+         url('Novecentosanswide-Normal-webfont.ttf') format('truetype'),
+         url('Novecentosanswide-Normal-webfont.svg#novecento_sans_widenormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+
+/*--------------------------------------------------------------
+# Reset
+--------------------------------------------------------------*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	display:inline-block;
+	text-decoration:none;
+}
+
+img {
+	display:inline-block;
+}
+
+html {
+	background-color:#eeeeee;
+}
+
+strong {
+	font-weight:900;
+}
+
+
+/*--------------------------------------------------------------
+header
+--------------------------------------------------------------*/
+
+.header-wrap {
+	width:100%;
+	background-color:#fff;
+	
+}
+
+.header {
+	width:100%;
+	height:;
+	background-color:#fff;
+	max-width:1300px;
+	margin:auto;
+	position:relative;
+}
+
+.header__phone {
+	width:40%;
+	height:50px;
+	/*background-color:rgba(255,0,4,1.00);*/
+	float:left;
+	font-size:17px;
+	line-height:24px;
+	font-family:'Open Sans Condensed', sans-serif;
+	font-weight:700;
+	padding-top:11px;
+	padding-left:20px;
+}
+
+.header__menu {
+	width:100%;
+	height:;
+	background-color:#eeeeee;
+	clear:both;
+}
+
+.header__btns {
+	width:60%;
+	height:50px;
+	background-color:;
+	float:right;
+	text-align:right;
+	font-size:14px;
+	font-family:Lucida Sans,Lucida Grande,Lucida Sans Unicode,sans-serif;
+	padding-top:0px;
+	padding-right:20px;
+	/*background-color:rgba(8,194,161,1.00);*/
+}
+
+.header__btns__btn1 {
+	display:inline-block;
+	padding:10px;
+	border:solid 2px #888888;
+	border-radius:20px;
+	color:#888888;
+}
+
+.header__btns__btn1:hover {
+	background-color:#888888;
+	color:#fff;
+}
+
+.header__btns__btn2 {
+	display:inline-block;
+	padding:10px;
+	border:solid 2px #009c6d;
+	border-radius:20px;
+	color:#009c6d;
+}
+
+.header__btns__btn2:hover {
+	background-color:#009c6d;
+	color:#fff;
+}
+
+.header__menu__dropdown_btn {
+	margin:20px;
+	vertical-align:top;
+	
+}
+
+.header__dropdown {
+	background-color:#888888;
+	height:;
+	padding:10px;
+	color:#fff;
+	display:none;
+	
+}
+
+.header__dropdown__main_item {
+	font-family:'novecento_sans_widelight';
+	border-top:solid thin #6F6F6F;
+	padding:10px;
+	line-height:10px;
+	cursor:pointer;
+}
+
+.header__dropdown__main_item:first-child {
+	border-top:none;
+	
+}
+
+.header__dropdown__main_item__img {
+	padding-right:5px;
+}
+
+.header__dropdown__main_item__img2 {
+	padding-right:5px;
+	display:none;
+}
+
+.header__dropdown__main_item__sub {
+	padding-top:10px;
+	display:none;
+}
+
+.header__dropdown__main_item__sub_menu {
+	font-size:12px;
+	color:#ffffff;
+	font-family:open-sans,sans-serif;
+	padding-top:10px;
+	padding-bottom:10px;
+	line-height:17px;
+	font-weight:300;
+	padding-left:25px;
+	border-top:solid thin #999999;
+	background-color:rgba(255,255,255,.30);
+}
+
+
+
+.header__menu__logo {
+	width:150px;
+	padding-top:3px;
+	margin-bottom:-1px;
+}
+
+.header__menu__products {
+	display:none;
+}
+
+.header__menu__big-click {
+	display:none;
+}
+
+.header__menu__resources {
+	display:none;
+}
+
+.header__menu__products__sub {
+	
+	display:none;
+}
+
+.header__menu__resources__sub {
+	
+	display:none;
+}
+
+.header__menu__resources__sub__list__item__link__img {
+	margin-bottom:-4px;
+	opacity: .8;
+}
+
+.header__menu__resources__sub__list__item__link__img:hover {
+	
+	opacity: 1.0;
+}
+
+.header__menu__resources__sub__list__item__link__img_hardwoods {
+	
+	background-image:url(images/icons/tt3.0-hardwood-icon-black.png);
+	background-size:contain;
+	height:101px;
+	display:block; 
+	margin-bottom:6px; 
+	width:100%;
+	background-repeat:no-repeat;
+}
+
+.header__menu__resources__sub__list__item__link__img_hardwoods:hover {
+	
+	
+	
+	background-image:url(images/icons/tt3.0-hardwood-icon-grn.png);
+}
+
+
+.header__menu__resources__sub__list__item__link__img_softwoods {
+	
+	background-image:url(images/icons/tt3.0-softwood-icon-black.png);
+	background-size:contain;
+	height:101px;
+	display:block; 
+	margin-bottom:6px; 
+	width:100%;
+	background-repeat:no-repeat;
+}
+
+.header__menu__resources__sub__list__item__link__img_softwoods:hover {
+	
+	
+	
+	background-image:url(images/icons/tt3.0-softwood-icon-grn.png);
+}
+
+.header__menu__resources__sub__list__item__link__img_composites {
+	
+	background-image:url(images/icons/tt3.0-composite-icon-black.png);
+	background-size:contain;
+	height:101px;
+	display:block; 
+	margin-bottom:6px; 
+	width:100%;
+	background-repeat:no-repeat;
+}
+
+.header__menu__resources__sub__list__item__link__img_composites:hover {
+	
+	
+	
+	background-image:url(images/icons/tt3.0-composite-icon-grn.png);
+}
+
+.header__menu__resources__sub__list__item__link__img_ss {
+	
+	background-image:url(images/icons/tt3.0-siding-and-soffit-icon-black.png);
+	background-size:contain;
+	height:101px;
+	display:block; 
+	margin-bottom:6px; 
+	width:100%;
+	background-repeat:no-repeat;
+}
+
+.header__menu__resources__sub__list__item__link__img_ss:hover {
+	
+	
+	
+	background-image:url(images/icons/tt3.0-siding-and-soffit-icon-grn.png);
+}
+
+.header__menu__resources__sub__list__item__link__img_framing {
+	
+	background-image:url(images/icons/tt3.0-framing-icon-black.png);
+	background-size:contain;
+	height:101px;
+	display:block; 
+	margin-bottom:6px; 
+	width:100%;
+	background-repeat:no-repeat;
+}
+
+.header__menu__resources__sub__list__item__link__img_framing:hover {
+	
+	
+	
+	background-image:url(images/icons/tt3.0-framing-icon-grn.png);
+}
+
+.header__menu__resources__sub__list__item__link__img_beams {
+	
+	background-image:url(images/icons/tt3.0-beams-icon-black.png);
+	background-size:contain;
+	height:101px;
+	display:block; 
+	margin-bottom:6px; 
+	width:100%;
+	background-repeat:no-repeat;
+}
+
+.header__menu__resources__sub__list__item__link__img_beams:hover {
+	
+	
+	
+	background-image:url(images/icons/tt3.0-beams-icon-grn.png);
+}
+
+.header__menu__resources__sub__list__item__link__img_railings {
+	
+	background-image:url(images/icons/tt3.0-railings-icon-black.png);
+	background-size:contain;
+	height:101px;
+	display:block; 
+	margin-bottom:6px; 
+	width:100%;
+	background-repeat:no-repeat;
+}
+
+.header__menu__resources__sub__list__item__link__img_railings:hover {
+	
+	
+	
+	background-image:url(images/icons/tt3.0-railings-icon-grn.png);
+}
+
+.header__menu__resources__sub__list__item__link__img_accessories {
+	
+	background-image:url(images/icons/tt3.0-accessories-icon-black.png);
+	background-size:contain;
+	height:101px;
+	display:block; 
+	margin-bottom:6px; 
+	width:100%;
+	background-repeat:no-repeat;
+}
+
+.header__menu__resources__sub__list__item__link__img_accessories:hover {
+	
+	
+	
+	background-image:url(images/icons/tt3.0-accessories-icon-grn.png);
+}
+
+.header__menu__resources__sub__list__item__link__img_joe {
+	
+	background-image:url(images/icons/tt3.0-kamado-joe-icon-black.png);
+	background-size:contain;
+	height:101px;
+	display:block; 
+	margin-bottom:6px; 
+	width:100%;
+	background-repeat:no-repeat;
+}
+
+.header__menu__resources__sub__list__item__link__img_joe:hover {
+	
+	
+	
+	background-image:url(images/icons/tt3.0-kamado-joe-icon-red.png);
+}
+
+
+
+
+@media screen and (min-width: 500px) {
+	
+	.header__phone {
+	width:50%;
+	height:50px;
+	/*background-color:rgba(255,0,4,1.00);*/
+	float:left;
+	font-size:20px;
+	line-height:24px;
+	font-family:'Open Sans Condensed', sans-serif;
+	font-weight:700;
+	padding-top:12px;
+	padding-left:20px;
+}
+
+.header__btns {
+	width:50%;
+	height:50px;
+	background-color:;
+	float:right;
+	text-align:right;
+	font-size:14px;
+	font-family:Lucida Sans,Lucida Grande,Lucida Sans Unicode,sans-serif;
+	padding-top:0px;
+	padding-right:20px;
+	/*background-color:rgba(8,194,161,1.00);*/
+}
+	
+}
+
+@media screen and (min-width: 1000px) {
+	
+	.header__phone {
+	width:20%;
+	padding-top:19px;
+	
+}
+
+.header__btns {
+	width:20%;
+	padding-top:8px;
+	
+}
+
+.header__menu {
+	width:60%;
+	clear:none;
+	margin:auto;
+	background-color:#fff;
+	position:relative;
+}
+
+.header__menu__dropdown_btn {
+	display:none;
+}
+
+.header__menu__logo {
+	margin:auto;
+	display:inherit;
+	width:150px;
+	padding-top:0px;
+}
+
+.header__dropdown {
+	display:none;
+	
+}
+
+.header__dropdown__wrap {
+       display: none;
+}
+    
+.header__menu__products {
+	display:block;
+	position:absolute;
+	position:absolute;
+	left:17%;
+	top:24px;
+	font-family:'novecento_sans_widelight';
+	font-size:24px;
+    color: #231F20;
+}
+
+.header__menu__products:hover {
+	color:#009c6d;
+	cursor:pointer;
+	border-bottom:thick solid #eeeeee;
+	padding-bottom:11px;
+}
+
+.hover {
+	color:#009c6d !important;
+	cursor:pointer;
+	border-bottom:7px solid #eeeeee;
+	padding-bottom:10px;
+}
+    
+
+
+.header__menu__big-click {
+	display:block;
+	position:absolute;
+	position:absolute;
+	left:17%;
+	top:24px;
+	font-family:'novecento_sans_widelight';
+	font-size:24px;
+}
+
+.header__menu__products:hover {
+	color:#009c6d;
+	cursor:pointer;
+	border-bottom:7px solid #eeeeee;
+	padding-bottom:10px;
+}
+
+.header__menu__resources {
+	display:block;
+	position:absolute;
+	right:15.2%;
+	top:24px;
+	font-family:'novecento_sans_widelight';
+	font-size:24px;
+    color: #231F20;
+}
+
+.header__menu__resources:hover {
+	color:#009c6d;
+	cursor:pointer;
+	border-bottom:7px solid #eeeeee;
+	padding-bottom:10px;
+}
+
+.header__menu__products__sub {
+	background-color:#eeeeee;
+	width:100%;
+	display:block;
+	position:absolute;
+	top:64px;
+	z-index:1;
+	left:50%;
+	margin-left:-50%;
+	display:none;
+	text-align:center;
+}
+
+.header__menu__resources__sub {
+	background-color:#eeeeee;
+	width:100%;
+	display:block;
+	position:absolute;
+	top:64px;
+	z-index:1;
+	left:50%;
+	margin-left:-50%;
+	display:none;
+	text-align:center;
+}
+
+.header__menu__products__sub__list {
+	padding:10px;
+	overflow-x:scroll;
+	white-space:nowrap;
+	
+	
+}
+
+.header__menu__products__sub__list__item {
+	font-size:17px;
+	line-height:22px;
+	font-weight:300;
+	
+	display:inline-block;
+	width:116px;
+	padding:10px;
+	color:#00573D;
+	text-align:center;
+	font-family:'novecento_slab_condensenormal';
+	padding-bottom:0px;
+	margin:0 10px;
+}
+
+.header__menu__products__sub__list__item:last-child {
+	margin-right:10px;
+}
+    
+.header__menu__products__sub__list__item__link {
+    color: #00573D;
+	width:100%;
+        
+}
+
+.header__menu__products__sub__list__item__link:hover {
+    color: #231f20
+        
+}
+
+.header__menu__resources__sub__list {
+	padding:10px;
+	overflow-x:scroll;
+	white-space:nowrap;
+}
+
+.header__menu__resources__sub__list__item {
+	font-size:17px;
+	line-height:22px;
+	font-weight:300;
+	
+	display:inline-block;
+	width:136px;
+	padding:10px;
+	color:#00573D;
+	text-align:center;
+	font-family:'novecento_slab_condensenormal';
+	padding-bottom:0px;
+}
+
+.header__menu__resources__sub__list__item:last-child {
+	margin-right:10px;
+}
+    
+.header__menu__resources__sub__list__item__link {
+    color: #555555;
+        
+}
+    
+.header__menu__resources__sub__list__item__link:hover {
+    color: #231f20
+        
+}
+
+}
+
+/*--------------------------------------------------------------
+module1
+--------------------------------------------------------------*/
+
+.module1 {
+	width:100%;
+	height:calc(100vh - 120px);
+	background-image:url(http://www.timbertownusa.com/hs-fs/hubfs/LANDING_PAGES/tt2.0-lp-header-1400x600-2x-outside.jpg?t=1478898316786&width=2800&name=tt2.0-lp-header-1400x600-2x-outside.jpg);
+	background-size:cover;
+	background-position:center;
+	position:relative;
+	
+}
+
+.module1__box{
+	border:solid 4px #fff;
+	width:270px;
+	padding:20px;
+	position:absolute;
+	top:calc(50% - 33px);
+	text-align:center;
+	color:#fff;
+	left:calc(50% - 135px);
+	font-family:'novecento_slab_widenormal';
+	font-size:19px;
+}
+    
+.module1__box2 {
+	position:absolute;
+	text-align:center;
+    width:10%;
+	bottom:10%;
+	left:calc(50% - 5%);
+}
+
+@media screen and (min-width: 500px) {
+	.module1 {
+	
+	height:calc(100vh - 120px);
+	
+}
+
+.module1__box{
+	width:450px;
+	padding:20px;
+	top:calc(50% - 40px);
+	left:calc(50% - 225px);
+	font-size:33px;
+}
+    
+.module1__box2 {
+	width:7%;
+	bottom:10%;
+	left:calc(50% - 3.5%);
+}
+    
+}
+    
+
+
+@media screen and (min-width: 1000px) {
+	.module1 {
+	width:100%;
+	height:calc(100vh - 64px);
+	background-image:url(http://www.timbertownusa.com/hs-fs/hubfs/LANDING_PAGES/tt2.0-lp-header-1400x600-2x-outside.jpg?t=1478898316786&width=2800&name=tt2.0-lp-header-1400x600-2x-outside.jpg);
+	background-size:cover;
+	background-position:center;
+}
+
+.module1__box{
+	width:650px;
+	padding:20px;
+	top:calc(50% - 49px);
+	left:calc(50% - 325px);
+	font-size:50px;
+}
+    
+.module1__box2 {
+	width:5%;
+	bottom:10%;
+	left:calc(50% - 2.5%);
+}
+
+}
+    
+@media screen and (min-width: 1300px) {
+    .module1__box2 {
+    width:3.5%;
+	bottom:10%;
+	left:calc(50% - 1.75%);    
+    }
+}
+    
+@media screen and (min-width: 2000px) {
+    .module1__box2 {
+    width:2.5%;
+	bottom:10%;
+	left:calc(50% - 1.25%);    
+    }
+}
+    
+
+
+
+
+/*--------------------------------------------------------------
+module2
+--------------------------------------------------------------*/
+
+.module2 {
+	width:100%;
+	max-width:1300px;
+	margin:auto;
+	display:table;
+}
+
+.module2__left {
+	width:100%;
+	height:400px;
+	background-image:url(images/tt3.0-half-page-image-1400x1400-eating-outside.jpg);
+	background-size:cover;
+	background-position:center;
+	
+}
+
+.module2__right {
+	width:100%;
+	background-color:rgba(0,0,0,1.00);
+	color:#fff;
+	padding:20px;
+	
+	
+}
+
+.module2__right__header {
+	font-family:'novecento_sans_widelight';
+	font-size:30px;
+}
+
+.module2__right__text {
+	font-family:Helvetica Neue,Arial,sans-serif;
+	padding-top:25px;
+	line-height:25px;
+	font-size:15px;
+	font-weight:300;
+}
+
+.module2__right__text__list {
+	padding-top:20px;
+	font-family:'novecento_slab_condensenormal';
+	font-size:16px;
+	line-height:18px;
+}
+
+.module2__right__text__list__link {
+	color:#fff;
+	padding-top:15px
+}
+
+.module2__right__text__list__link:hover {
+	text-decoration:underline;
+}
+
+
+@media screen and (min-width: 750px) {
+	
+	.module2__left {
+		width:50%;
+		display:table-cell;
+		height:700px;
+}
+
+.module2__right {
+	/*width:50%;
+	display:table-cell;
+	padding:50px;*/
+    
+    display: table-cell;
+    padding: 50px;
+    width: 100%;
+    vertical-align: middle;
+}
+
+
+}
+
+@media screen and (min-width: 800px) {
+	.module2__right__text__list {
+	font-size:16px;
+}
+}
+
+@media screen and (min-width: 950px) {
+	.module2__right__text__list {
+	font-size:18px;
+}
+
+.module2__right__text {
+	font-size:18px;
+}
+
+.module2__right__header {
+	font-size:40px;
+}
+}
+
+/*--------------------------------------------------------------
+module3
+--------------------------------------------------------------*/
+
+.module3 {
+	width:100%;
+	max-width:1300px;
+	margin:auto;
+	display:table;
+	
+}
+
+.module3__right {
+	width:100%;
+	background-color:rgba(256,256,256,1.00);
+	height:400px;
+	padding:20px;
+	background-image:url(images/tt3.0-half-page-image-1400x1400-tech-outside.jpg);
+	background-size:cover;
+	background-position:center;
+}
+
+.module3__right2 {
+	width:100%;
+	background-color:rgba(256,256,256,1.00);
+	height:400px;
+	padding:20px;
+	background-image:url(images/tt3.0-half-page-image-1400x1400-tech-outside.jpg);
+	background-size:cover;
+	background-position:center;
+	display:none;
+}
+
+.module3__left {
+	width:100%;
+	/*background-color:rgba(0,0,0,1.00);*/
+    background-color:#00573d;
+	color:#fff;
+	padding:20px;
+    
+}
+
+.module3__left__header {
+	font-family:'novecento_sans_widelight';
+	font-size:30px;
+}
+
+.module3__left__text {
+	font-family:Helvetica Neue,Arial,sans-serif;
+	padding-top:30px;
+	line-height:25px;
+	font-size:15px;
+	font-weight:300;
+}
+
+.module3__left__text__list {
+	padding-top:20px;
+	font-family:'novecento_slab_condensenormal';
+	font-size:16px;
+	line-height:18px;
+}
+
+
+.module3__left__text__list__link {
+	padding-top:15px;
+	color:#fff;
+}
+
+
+.module3__left__text__list__link:hover {
+	text-decoration:underline;
+}
+
+
+
+
+@media screen and (min-width: 750px) {
+	
+    .module3 {
+	width:100%;
+	max-width:1300px;
+	margin:auto;
+	display:table;
+    height: 700px;
+	
+}
+    
+	.module3__right {
+		width:50%;
+		display:table-cell;
+		height:auto;
+		display:none;
+		padding:50px;
+}
+
+.module3__right2 {
+	width:50%;
+	height:auto;
+	display:table-cell;
+}
+
+.module3__left {
+	/*width:50%;
+	display:table-cell;
+	padding:50px;*/
+    
+    display: table-cell;
+    padding: 50px;
+    width: 50%;
+    vertical-align: middle;
+    
+   
+	
+}
+
+
+}
+
+@media screen and (min-width: 800px) {
+	.module3__left__text__list {
+	
+	font-size:16px;
+}
+}
+
+@media screen and (min-width: 950px) {
+	.module3__left__text__list {
+	
+	font-size:18px;
+}
+
+.module3__left__text {
+	font-size:18px;
+}
+
+.module3__left__header {
+	font-size:40px;
+}
+}
+
+/*--------------------------------------------------------------
+footer
+--------------------------------------------------------------*/
+
+.footer {
+	width:100%;
+	height:;
+	background-color:#EEEEEE;
+	
+}
+
+.footer__social {
+	width:100%;
+	height:;
+	background-color:#009c6d;
+	padding:10px;
+	text-align:center;
+	
+}
+
+.footer__social__link {
+	margin:10px;
+}
+
+.footer__social__link__img {
+	margin-bottom:-4px;
+	
+}
+
+.houzz {
+	background-image:url(images/houzz.png);
+	width:40px;
+	height:40px;
+	display:inline-block;
+	background-size:cover;
+}
+
+.houzz:hover {
+	background-image:url(images/houzz-hover.png);
+}
+
+.facebook {
+	background-image:url(images/facebook.png);
+	width:40px;
+	height:40px;
+	display:inline-block;
+	background-size:cover;
+}
+
+.facebook:hover {
+	background-image:url(images/facebook-hover.png);
+}
+
+.twitter {
+	background-image:url(images/twitter.png);
+	width:40px;
+	height:40px;
+	display:inline-block;
+	background-size:cover;
+}
+
+.twitter:hover {
+	background-image:url(images/twitter-hover.png);
+}
+
+.google-plus {
+	background-image:url(images/google-plus.png);
+	width:40px;
+	height:40px;
+	display:inline-block;
+	background-size:cover;
+}
+
+.google-plus:hover {
+	background-image:url(images/google-plus-hover.png);
+}
+
+.linkedin {
+	background-image:url(images/linkedin.png);
+	width:40px;
+	height:40px;
+	display:inline-block;
+	background-size:cover;
+}
+
+.linkedin:hover {
+	background-image:url(images/linkedin-hover.png);
+}
+
+.pinterest {
+	background-image:url(images/pinterest.png);
+	width:40px;
+	height:40px;
+	display:inline-block;
+	background-size:cover;
+}
+
+.pinterest:hover {
+	background-image:url(images/pinterest-hover.png);
+}
+
+.footer__main {
+	width:100%;
+	height:;
+	background-color:#eeeeee;
+	
+}
+
+.footer__main__category--desktop{
+	padding:10px;
+	max-width:1300px;
+	margin:auto;
+	display:none;
+	
+}
+
+.footer__main__category--mobile{
+	padding:10px;
+	max-width:1300px;
+	margin:auto;
+	display:inline-block;
+	
+}
+
+.footer__main__category__link{
+	padding:15px 10px 15px 10px;
+	font-family:"novecento_slab_condensenormal";
+	font-size:18px;
+	color:#555555;
+	display:inline-block;
+	vertical-align:top;
+	width:calc(100% - 10px);
+}
+
+.footer__main__category__link__img {
+	padding-right:5px;
+}
+
+.footer__main__category__link__img2 {
+	padding-right:5px;
+	display:none;
+}
+
+
+
+.footer__main__category__sub {
+	padding-top:10px;
+	padding-left:25px;
+	display:none;
+}
+
+.footer__main__category__sub__item {
+	font-size:12px;
+	color:#555555;
+	font-family:open-sans,sans-serif;
+	padding-top:0px;
+	line-height:18px;
+	font-weight:300;
+}
+
+.footer__main__category__sub__item__link {
+	color:#555555;
+}
+
+.footer__main__category__sub__item__link:hover {
+	text-decoration:underline;
+}
+
+
+
+.footer__foot {
+	background-color:#333333;
+	color:rgba(255,255,255,1.00);
+	color:#888888;
+	font-size:12px;
+	line-height:14px;
+	text-align:center;
+	padding:35px 0;
+	font-family:Arial,Helvetica Neue,Helvetica,sans-serif;
+	
+}
+
+.footer__foot__link {
+	color:#888888;
+	border-bottom:thin solid rgba(47,0,252,1.00);
+	border-bottom:
+}
+
+.foot-wrap {
+	padding-left:33%;
+}
+
+.foot-wrap-title {
+	display:inline-block;
+	cursor:pointer;
+}
+    
+.foot-wrap-title-b {
+	display:inline-block;
+	cursor:pointer;
+}
+
+
+
+@media screen and (min-width: 450px) {
+	
+	.footer__main__category__link{
+	width:100%;
+	}
+	
+	.foot-wrap {
+	padding-left:21%;
+}
+
+.foot-left {
+	width:50%;
+	float:left;
+}
+
+.foot-right {
+	width:50%;
+	float:right;
+}
+	
+}
+
+@media screen and (min-width: 625px) {
+	
+	.footer__main__category__link{
+	width:32.89%;
+	}
+	
+	.footer__main__category__link__img {
+	display:none;
+}
+
+.footer__main__category__sub {
+	padding-top:10px;
+	padding-left:0px;
+	display:block;
+}
+
+.footer__main__category--desktop{
+	padding:10px;
+	max-width:1300px;
+	margin:auto;
+	display:block;
+	
+}
+
+.footer__main__category--mobile{
+	padding:10px;
+	max-width:1300px;
+	margin:auto;
+	display:none;
+	
+}
+
+.foot-wrap-title {
+	cursor:default;
+}
+    
+.foot-wrap-title-b {
+	cursor:default;
+}
+	
+}
+
+@media screen and (min-width: 800px) {
+	
+	.footer__main__category__link{
+	width:24.61%;
+	}
+	
+}
+
+@media screen and (min-width: 1000px) {
+	
+	.footer__main__category__link{
+	width:19.67%;
+	}
+	
+}
+
+@media screen and (min-width: 1200px) {
+	
+	.footer__main__category__link{
+	width:16.38%;
+	}
+	
+}
+
+</style>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+	<!--------   header module   -------->
+    
+    
+    <div class="header-wrap">
+        <div class="header">
+        	
+            <div class="header__phone">
+                1-888-890-6214
+            </div>
+            <div class="header__btns">
+            	<a href="http://www.timbertownusa.com/locations" style="margin-right:10px; margin-top:5px">
+                <div class="header__btns__btn1">
+                    Locations
+                </div>
+                </a>
+                <a href="http://inside.timbertownusa.com/quote">
+                <div class="header__btns__btn2">
+                    Quote
+                </div>
+                </a>
+            </div>
+            <div class="header__menu">
+            	<div id="products-click" class="header__menu__products">
+                	products
+                    
+                </div>
+                <img class="header__menu__dropdown_btn" src="images/menu.png" onclick="toggle_visibility('drop')" style="cursor:pointer; width:30px; height:30px;">
+                <img class="header__menu__logo" src="images/tt30-nav-logo-175x75-2x-timbertown.png">
+                <div id="resources-click" class="header__menu__resources">
+                	resources
+                </div>
+            </div>
+            <div class="header__dropdown__wrap">
+            <div id="drop" class="header__dropdown">
+                <ul>
+                	
+                    
+                        <li class="header__dropdown__main_item">
+                            <img class="header__dropdown__main_item__img" src="images/down-grey.png" style="width:20px; height:15px;">
+                            <img class="header__dropdown__main_item__img2" src="images/up-grey.png" style="width:20px; height:15px;">
+                            <span style="display:inline-block; margin-top:3px; vertical-align:top;">PRODUCTS</span>
+                            <ul class="header__dropdown__main_item__sub">
+                                <a href="http://www.timbertownusa.com/hardwoods" style="color:#fff; width:100%">
+                                <li class="header__dropdown__main_item__sub_menu">
+                                    Hardwoods
+                                </li>
+                                </a>
+                                <a href="http://www.timbertownusa.com/softwoods" style="color:#fff; width:100%">
+                                <li class="header__dropdown__main_item__sub_menu">
+                                    Softwoods
+                                    
+                                </li>
+                                </a>
+                                <a href="http://www.timbertownusa.com/composites" style="color:#fff; width:100%">
+                                <li class="header__dropdown__main_item__sub_menu">
+                                    
+                                    Composites
+                                    
+                                </li>
+                                </a>
+                                <a href="http://www.timbertownusa.com/siding-soffits" style="color:#fff; width:100%">
+                                <li class="header__dropdown__main_item__sub_menu">
+                                    Sliding/Soffits
+                                    
+                                </li>
+                                </a>
+                                <a href="http://www.timbertownusa.com/deck-framing" style="color:#fff; width:100%">
+                                <li class="header__dropdown__main_item__sub_menu">
+                                    Deck Framing
+                                    
+                                </li>
+                                </a>
+                                <a href="http://www.timbertownusa.com/beams" style="color:#fff; width:100%">
+                                <li class="header__dropdown__main_item__sub_menu">
+                                    Beams
+                                    
+                                </li>
+                                </a>
+                                <a href="http://www.timbertownusa.com/railings" style="color:#fff; width:100%">
+                                <li class="header__dropdown__main_item__sub_menu">
+                                    Railings
+                                    
+                                </li>
+                                </a>
+                                <a href="http://www.timbertownusa.com/accessories" style="color:#fff; width:100%">
+                                <li class="header__dropdown__main_item__sub_menu">
+                                    Accessories
+                                    
+                                </li>
+                                </a>
+                                <a href="http://www.timbertownusa.com/kamado-joe" style="color:#fff; width:100%">
+                                <li class="header__dropdown__main_item__sub_menu">
+                                    Komado Joe
+                                    
+                                </li>
+                                </a>
+                            </ul>
+                        </li>
+                    
+                    <li class="header__dropdown__main_item">
+                        <img class="header__dropdown__main_item__img" src="images/down-grey.png" style="width:20px; height:15px;">
+                        <img class="header__dropdown__main_item__img2" src="images/up-grey.png" style="width:20px; height:15px;">
+                        <span style="display:inline-block; margin-top:3px; vertical-align:top;">RESOURCES</span>
+                        <ul class="header__dropdown__main_item__sub">
+                        	<a href="http://inside.timbertownusa.com/blog" style="color:#fff; width:100%">
+                            <li class="header__dropdown__main_item__sub_menu">
+                                Articles
+                                
+                            </li>
+                            </a>
+                            <a href="http://www.timbertownusa.com/gallery" style="color:#fff; width:100%">
+                            <li class="header__dropdown__main_item__sub_menu">
+                                Photos
+                                
+                            </li>
+                            </a>
+                            <a href="http://inside.timbertownusa.com/resources" style="color:#fff; width:100%">
+                            <li class="header__dropdown__main_item__sub_menu">
+                                Projects
+                                
+                            </li>
+                            </a>
+                            <a href="http://inside.timbertownusa.com/resources" style="color:#fff; width:100%">
+                            <li class="header__dropdown__main_item__sub_menu">
+                                Product Guides
+                                
+                            </li>
+                            </a>
+                            <a href="http://inside.timbertownusa.com/resources" style="color:#fff; width:100%">
+                            <li class="header__dropdown__main_item__sub_menu">
+                                Install Guides
+                                
+                            </li>
+                            </a>
+                            <a href="http://inside.timbertownusa.com/resources" style="color:#fff; width:100%">
+                            <li class="header__dropdown__main_item__sub_menu">
+                                Technical Guides
+                                
+                            </li>
+                            </a>
+                            <a href="http://inside.timbertownusa.com/find-a-craftsman" style="color:#fff; width:100%">
+                            <li class="header__dropdown__main_item__sub_menu">
+                                Find A Craftsman
+                                
+                            </li>
+                            </a>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            </div>
+            <div id="products-toggle" class="header__menu__products__sub">
+                    <ul class="header__menu__products__sub__list">
+                            <li class="header__menu__products__sub__list__item">
+                            	<a class="header__menu__products__sub__list__item__link" href="http://www.timbertownusa.com/hardwoods" >
+                            	<div class="header__menu__resources__sub__list__item__link__img_hardwoods">
+                                </div>
+                                HARDWOODS
+                                </a>
+                            </li>
+                            <li class="header__menu__products__sub__list__item">
+                            	<a class="header__menu__products__sub__list__item__link" href="http://www.timbertownusa.com/softwoods" >
+                            	<div class="header__menu__resources__sub__list__item__link__img_softwoods">
+                                </div>
+                                SOFTWOODS
+                                </a>
+                            </li>
+                            <li class="header__menu__products__sub__list__item">
+                            	<a class="header__menu__products__sub__list__item__link" href="http://www.timbertownusa.com/composites" >
+                            	<div class="header__menu__resources__sub__list__item__link__img_composites">
+                                </div>
+                                COMPOSITES
+                                </a>
+                            </li>
+                            <li class="header__menu__products__sub__list__item">
+                            	<a class="header__menu__products__sub__list__item__link" href="http://www.timbertownusa.com/siding-soffits" >
+                            	<div class="header__menu__resources__sub__list__item__link__img_ss">
+                                </div>
+                                SLIDING/SOFFITS
+                                </a>
+                            </li>
+                            <li class="header__menu__products__sub__list__item">
+                            	<a class="header__menu__products__sub__list__item__link" href="http://www.timbertownusa.com/deck-framing" >
+                            	<div class="header__menu__resources__sub__list__item__link__img_framing">
+                                </div>
+                                DECK FRAMING
+                                </a>
+                            </li>
+                            <li class="header__menu__products__sub__list__item">
+                            	<a class="header__menu__products__sub__list__item__link" href="http://www.timbertownusa.com/beams" >
+                            	<div class="header__menu__resources__sub__list__item__link__img_beams">
+                                </div>
+                                BEAMS
+                                </a>
+                            </li>
+                            <li class="header__menu__products__sub__list__item">
+                            	<a class="header__menu__products__sub__list__item__link" href="http://www.timbertownusa.com/railings" >
+                            	<div class="header__menu__resources__sub__list__item__link__img_railings">
+                                </div>
+                                RAILINGS
+                                </a>
+                            </li>
+                            <li class="header__menu__products__sub__list__item">
+                            	<a class="header__menu__products__sub__list__item__link" href="http://www.timbertownusa.com/accessories" >
+                            	<div class="header__menu__resources__sub__list__item__link__img_accessories">
+                                </div>
+                                ACCESSORIES
+                                </a>
+                            </li>
+                            <li class="header__menu__products__sub__list__item">
+                            	<a class="header__menu__products__sub__list__item__link" href="http://www.timbertownusa.com/kamado-joe" >
+                            	<div class="header__menu__resources__sub__list__item__link__img_joe">
+                                </div>
+                                KOMADO JOE
+                                </a>
+                            </li>
+                        </ul>
+        	</div>
+            
+            <!--
+            <div id="products-toggle" class="header__menu__products__sub">
+                    <ul class="header__menu__products__sub__list">
+                            <li class="header__menu__products__sub__list__item">
+                            	<a class="header__menu__products__sub__list__item__link" href="http://www.timbertownusa.com/hardwoods" >
+                            	<div class="header__menu__resources__sub__list__item__link__img_hardwoods" style="display:block; margin-bottom:6px; width:100%;">
+                                </div>
+                                HARDWOODS
+                                </a>
+                            </li>
+                            <li class="header__menu__products__sub__list__item">
+                            	<a class="header__menu__products__sub__list__item__link" href="http://www.timbertownusa.com/softwoods" >
+                            	<img class="header__menu__resources__sub__list__item__link__img" src="images/icons/tt3.0-softwood-icon-grn.png" style="display:block; padding-bottom:10px; width:100%">
+                                SOFTWOODS
+                                </a>
+                            </li>
+                            <li class="header__menu__products__sub__list__item">
+                            	<a class="header__menu__products__sub__list__item__link" href="http://www.timbertownusa.com/composites" >
+                            	<img class="header__menu__resources__sub__list__item__link__img" src="images/icons/tt3.0-composite-icon-grn.png" style="display:block; padding-bottom:10px; width:100%">
+                                COMPOSITES
+                                </a>
+                            </li>
+                            <li class="header__menu__products__sub__list__item">
+                            	<a class="header__menu__products__sub__list__item__link" href="http://www.timbertownusa.com/siding-soffits" >
+                            	<img class="header__menu__resources__sub__list__item__link__img" src="images/icons/tt3.0-siding-and-soffit-icon-grn.png" style="display:block; padding-bottom:10px; width:100%">
+                                SLIDING/SOFFITS
+                                </a>
+                            </li>
+                            <li class="header__menu__products__sub__list__item">
+                            	<a class="header__menu__products__sub__list__item__link" href="http://www.timbertownusa.com/deck-framing" >
+                            	<img class="header__menu__resources__sub__list__item__link__img" src="images/icons/tt3.0-framing-icon-grn.png" style="display:block; padding-bottom:10px; width:100%">
+                                DECK FRAMING
+                                </a>
+                            </li>
+                            <li class="header__menu__products__sub__list__item">
+                            	<a class="header__menu__products__sub__list__item__link" href="http://www.timbertownusa.com/beams" >
+                            	<img class="header__menu__resources__sub__list__item__link__img" src="images/icons/tt3.0-beams-icon-grn.png" style="display:block; padding-bottom:10px; width:100%">
+                                BEAMS
+                                </a>
+                            </li>
+                            <li class="header__menu__products__sub__list__item">
+                            	<a class="header__menu__products__sub__list__item__link" href="http://www.timbertownusa.com/railings" >
+                            	<img class="header__menu__resources__sub__list__item__link__img" src="images/icons/tt3.0-railings-icon-grn.png" style="display:block; padding-bottom:10px; width:100%">
+                                RAILINGS
+                                </a>
+                            </li>
+                            <li class="header__menu__products__sub__list__item">
+                            	<a class="header__menu__products__sub__list__item__link" href="http://www.timbertownusa.com/accessories" >
+                            	<img class="header__menu__resources__sub__list__item__link__img" src="images/icons/tt3.0-railings-icon-grn.png" style="display:block; padding-bottom:10px; width:100%">
+                                ACCESSORIES
+                                </a>
+                            </li>
+                            <li class="header__menu__products__sub__list__item">
+                            	<a class="header__menu__products__sub__list__item__link" href="http://www.timbertownusa.com/kamado-joe" >
+                            	<img class="header__menu__resources__sub__list__item__link__img" src="images/icons/tt3.0-kamado-joe-icon-red.png" style="display:block; padding-bottom:10px; width:100%">
+                                KOMADO JOE
+                                </a>
+                            </li>
+                        </ul>
+        	</div>
+            -->
+            
+        	<div id="resources-toggle" class="header__menu__resources__sub">
+                        
+                        <ul class="header__menu__resources__sub__list">
+                            <li class="header__menu__resources__sub__list__item">
+                            	<a class="header__menu__resources__sub__list__item__link" href="http://inside.timbertownusa.com/blog" >
+                            	<img class="header__menu__resources__sub__list__item__link__img" src="images/icons/tt3.0-articles-icon-black.png" style="display:block; width:100%; padding:10px; padding-top:0px; padding-bottom:15px;">
+                                ARTICLES
+                                </a>
+                            </li>
+                            <li class="header__menu__resources__sub__list__item">
+                            	<a class="header__menu__resources__sub__list__item__link" href="http://www.timbertownusa.com/gallery" >
+                            	<img class="header__menu__resources__sub__list__item__link__img" src="images/icons/tt3.0-photos-icon-black.png" style="display:block; width:100%; padding:10px; padding-top:0px; padding-bottom:15px;">
+                                PHOTOS
+                                </a>
+                            </li>
+                            <li class="header__menu__resources__sub__list__item">	
+                            	<a class="header__menu__resources__sub__list__item__link" href="http://inside.timbertownusa.com/resources" >
+                            	<img class="header__menu__resources__sub__list__item__link__img" src="images/icons/tt3.0-projects-icon-black.png" style="display:block; width:100%; padding:10px; padding-top:0px; padding-bottom:15px;">
+                                PROJECTS
+                                </a>
+                            </li>
+                            <li class="header__menu__resources__sub__list__item">
+                            	<a class="header__menu__resources__sub__list__item__link" href="http://inside.timbertownusa.com/resources" >
+                            	<img class="header__menu__resources__sub__list__item__link__img" src="images/icons/tt3.0-product-info-icon-black.png" style="display:block; width:100%; padding:10px; padding-top:0px; padding-bottom:15px;">
+                                PRODUCT GUIDES
+                                </a>
+                            </li>
+                            <li class="header__menu__resources__sub__list__item">
+                            	<a class="header__menu__resources__sub__list__item__link" href="http://inside.timbertownusa.com/resources" >
+                            	<img class="header__menu__resources__sub__list__item__link__img" src="images/icons/tt3.0-install-icon-black.png" style="display:block; width:100%; padding:10px; padding-top:0px; padding-bottom:15px;">
+                                INSTALL GUIDES
+                                </a>
+                            </li>
+                            <li class="header__menu__resources__sub__list__item">
+                            	<a class="header__menu__resources__sub__list__item__link" href="http://inside.timbertownusa.com/resources" >
+                            	<img class="header__menu__resources__sub__list__item__link__img" src="images/icons/tt3.0-spec-sheet-icon-black.png" style="display:block; width:100%; padding:10px; padding-top:0px; padding-bottom:15px;">
+                                TECHNICAL GUIDES
+                                </a>
+                            </li>
+                            <li class="header__menu__resources__sub__list__item">
+                            	<a class="header__menu__resources__sub__list__item__link" href="http://inside.timbertownusa.com/find-a-craftsman">
+                            	<img class="header__menu__resources__sub__list__item__link__img" src="images/icons/tt3.0-craftsmen-icon-black.png" style="display:block; width:100%; padding:10px; padding-top:0px; padding-bottom:15px;">
+                                FIND A CRAFTSMAN
+                                </a>
+                            </li>
+                        </ul>
+        	</div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    <script type="text/javascript">
+
+    function toggle_visibility(id) 
+{
+    var e = document.getElementById(id);
+	
+	
+    if (e.style.display == 'none' || e.style.display=='')
+    {
+        e.style.display = 'block';
+		
+		
+    }
+    else 
+    {
+        e.style.display = 'none';
+    }
+	
+	
+    
+}
+
+</script>
+
+<script type="text/javascript">
+
+//$(window).on('load resize', function(event){
+	//var windowWidth = jQuery(window).width();
+	//if(windowWidth < 1000){
+
+	$(document).ready(function(){
+		$('.header__dropdown__main_item').on("click", function(e){
+			if($(this).hasClass('active')){
+				$(this).find('.header__dropdown__main_item__sub').hide();
+				$(this).removeClass('active');
+			} else {
+				$(this).parent().parent().find('.header__dropdown__main_item__sub').hide();
+				$(this).parent().parent().find('.active').removeClass('active');
+				$(this).addClass('active');
+				$(this).find('.header__dropdown__main_item__sub').show();
+			}
+			e.preventDefault();
+			return true;
+		});
+    	$('.header__dropdown__main_item__sub a').on("click", function(e){
+			e.stopPropagation();
+    	});
+		
+		
+		
+		
+		$(document).ready(function(){
+		$('.header__dropdown__main_item').on("click", function(e){
+			if(jQuery(this).hasClass('active')){
+				jQuery(this).parent().parent().parent().parent().find('.header__dropdown__main_item__img2').hide();
+				jQuery(this).parent().parent().parent().parent().find('.header__dropdown__main_item__img').show();
+				jQuery(this).find('.header__dropdown__main_item__img').hide();
+				jQuery(this).find('.header__dropdown__main_item__img2').show();
+				
+			} else {
+				jQuery(this).find('.header__dropdown__main_item__img2').hide();
+				jQuery(this).find('.header__dropdown__main_item__img').show();
+			}
+			e.preventDefault();
+			return true;
+		});
+    	
+		
+
+	});
+		
+		
+		
+
+	});
+	
+	//}
+//});
+	
+</script>
+
+
+
+<script type="text/javascript">
+
+$(window).on('load resize', function(event){
+	var windowWidth = jQuery(window).width();
+	if(windowWidth > 999){
+
+	$(document).ready(function(){
+		$('.header__menu__products').on("mouseover", function(e){
+			
+				
+				$(this).addClass('active');
+				$(this).parent().parent().find('.header__menu__products__sub').show();
+				$(this).parent().find('.header__menu__products').fontcolor("#009c6d")();
+			e.preventDefault();
+			return true;
+		});
+    	
+		
+
+	});
+	
+	$(document).ready(function(){
+		$('.header__menu__products').on("mouseout", function(e){
+			
+				
+				
+				$(this).removeClass('active');
+				$(this).parent().parent().find('.header__menu__products__sub').hide();
+				
+			e.preventDefault();
+			return true;
+		});
+    	
+		
+
+	});
+	
+	$(document).ready(function(){
+		$('.header__menu__products__sub').on("mouseover", function(e){
+				
+				
+				
+				$(this).addClass('active');
+				$(this).parent().parent().find('.header__menu__products__sub').show();
+				
+				$(this).parent().find('.header__menu__products').addClass('hover')();
+				
+			e.preventDefault();
+			return true;
+		});
+    	
+		
+
+	});
+	
+	$(document).ready(function(){
+		$('.header__menu__products__sub').on("mouseout", function(e){
+			
+				
+				$(this).removeClass('active');
+				$(this).parent().parent().find('.header__menu__products__sub').hide();
+				
+				$(this).parent().find('.header__menu__products').removeClass('hover')();
+				
+			e.preventDefault();
+			return true;
+		});
+    	
+		
+
+	});
+	
+	
+	
+	}
+});
+	
+</script>
+
+<script type="text/javascript">
+
+$(window).on('load resize', function(event){
+	var windowWidth = jQuery(window).width();
+	if(windowWidth > 999){
+
+	$(document).ready(function(){
+		$('.header__menu__resources').on("mouseover", function(e){
+			
+				
+				$(this).addClass('active');
+				$(this).parent().parent().find('.header__menu__resources__sub').show();
+				
+				
+				
+			e.preventDefault();
+			return true;
+		});
+    	
+		
+
+	});
+	
+	$(document).ready(function(){
+		$('.header__menu__resources').on("mouseout", function(e){
+			
+				
+				$(this).removeClass('active');
+				$(this).parent().parent().find('.header__menu__resources__sub').hide();
+				
+				
+				
+			e.preventDefault();
+			return true;
+		});
+    	
+		
+
+	});
+	
+	$(document).ready(function(){
+		$('.header__menu__resources__sub').on("mouseover", function(e){
+			
+				
+				$(this).addClass('active');
+				$(this).parent().parent().find('.header__menu__resources__sub').show();
+				
+				$(this).parent().find('.header__menu__resources').addClass('hover')();
+				
+			e.preventDefault();
+			return true;
+		});
+    	
+		
+
+	});
+	
+	$(document).ready(function(){
+		$('.header__menu__resources__sub').on("mouseout", function(e){
+			
+				
+				$(this).removeClass('active');
+				$(this).parent().parent().find('.header__menu__resources__sub').hide();
+				
+				$(this).parent().find('.header__menu__resources').removeClass('hover')();
+				
+			e.preventDefault();
+			return true;
+		});
+    	
+		
+
+	});
+	
+	}
+});
+	
+</script>
+
+
+
+
+
+<!--------   header module   -------->
+
+
+
+
+
+    <!--------   module 1   -------->
+    
+    
+    <div class="module1">
+    	
+    	<div class="module1__box">
+        	ENJOY YOUR OUTSIDE
+        </div>
+        <a href="#module2">
+        <img id="module2" class="module1__box2" src="images/down-grey.png">
+        </a>
+        	
+        
+    </div>
+    
+    <!--------   module 1   -------->
+    
+    
+    <!--------   module 2   -------->
+    
+    <div class="module2">
+    	<div class="module2__left">
+        </div>
+        <div class="module2__right">
+        	<div class="module2__right__header">
+            	ENJOY <strong style="font-family:'novecento_sans_widenormal'">EATING</strong> OUTSIDE
+            </div>
+            <div class="module2__right__text">
+            	<strong>What was once a necessity is now an opportunity.</strong> Instead of dreading a meal outside enjoy a backyard barbecue with these helpful tips and delicious recipes.
+                <ul class="module2__right__text__list">
+                    <li>
+               	    	<a class="module2__right__text__list__link" href="http://inside.timbertownusa.com/blog/outdoor-accessories-and-decor/two-delicious-kamado-joe-recipes?__hstc=120410007.4680427fa806afb68dbec9df1e6a799e.1479427123670.1479427123670.1479427123670.1&__hssc=120410007.1.1479427123670&__hsfp=767778946&hsCtaTracking=b3d67a7b-3c2e-4e40-8c0d-5a8b5c2d5555%7Cc159edaa-016a-4975-ae1e-aeb3709e2e89">
+            	            Two Delicious Kamado Joe Recipes •>
+                        </a>
+                    </li>
+                    <li>
+                      	<a class="module2__right__text__list__link" href="http://www.edibleaustin.com/index.php/homeandgarden/92-entertaining/1146-taking-it-outdoors?__hstc=120410007.4680427fa806afb68dbec9df1e6a799e.1479427123670.1479427123670.1479427123670.1&__hssc=120410007.1.1479427123670&__hsfp=767778946&hsCtaTracking=6b7c4799-e4cc-4509-8000-94e3c8728b4e%7C5ebced90-9723-4124-95b0-adf804309cc1">
+                            Taking The Kitchen Outdoors •>
+                        </a>
+                    </li>
+                    <li>
+                    	<a class="module2__right__text__list__link" href="http://barbecuebible.com/2016/03/18/6-types-grills/?__hstc=120410007.4680427fa806afb68dbec9df1e6a799e.1479427123670.1479427123670.1479427123670.1&__hssc=120410007.1.1479427123670&__hsfp=767778946&hsCtaTracking=5b42fb68-41d4-40e1-8c91-136f2d0ea66f%7C2119903c-a530-4aef-862a-9eb1019293c9">
+                            The 6 Major Types of Grills •>
+                        </a>
+                    </li>
+                    <li>
+                    	<a class="module2__right__text__list__link" href="http://www.craveonline.com/mandatory/1052703-15-crazy-bbq-photos-to-get-you-in-the-grilling-mood#/slide/1">
+                            15 Crazy BBQ Photos To Get You In The Grilling Mood •>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!--------   module 2   -------->
+    
+    
+    <!--------   module 3   -------->
+    
+    <div class="module3">
+    	<div class="module3__right">
+        </div>
+        <div class="module3__left">
+        	<div class="module3__left__header">
+            	ENJOY <strong style="font-family:'novecento_sans_widenormal'">TECHNOLOGY</strong> OUTSIDE
+            </div>
+            <div class="module3__left__text">
+            	<strong>An old deck can be high-tech with the newest outdoor gadgets and trends.</strong> Check out what's new when it comes to technology in your backyard.
+                <ul class="module3__left__text__list">
+                    <li>
+                     	<a class="module3__left__text__list__link" href="http://www.hgtv.com/remodel/mechanical-systems/8-clever-outdoor-technology-trends-pictures?__hstc=120410007.4680427fa806afb68dbec9df1e6a799e.1479427123670.1479427123670.1479427123670.1&__hssc=120410007.1.1479427123670&__hsfp=767778946&hsCtaTracking=94623356-2279-45a5-a9bd-513e9c8e4409%7C09dc1ed4-cab0-4f14-a855-0b9f1008ebfb">
+                            8 Clever Outdoor Technology Trends •>
+                        </a>
+                    </li>
+                    <li>
+                      	<a class="module3__left__text__list__link" href="https://www.loveyourlandscape.org/expert-advice/outdoor-living/outdoor-entertaining/2016-new-design-trends-for-ultimate-outdoor-living-spaces/?__hstc=120410007.4680427fa806afb68dbec9df1e6a799e.1479427123670.1479427123670.1479427123670.1&__hssc=120410007.1.1479427123670&__hsfp=767778946&hsCtaTracking=46660a85-db73-40e4-8c3c-dc7b740ac06e%7Cefd094e2-1935-4e90-98a4-17676994b09c">
+                            New Design Trends For The Ultimate Outdoor Living Space •>
+                        </a>
+                    </li>
+                    <li>
+                      	<a class="module3__left__text__list__link" href="http://www.housebeautiful.com/shopping/home-gadgets/tips/g1753/outdoor-tech-product/?__hstc=120410007.4680427fa806afb68dbec9df1e6a799e.1479427123670.1479427123670.1479427123670.1&__hssc=120410007.1.1479427123670&__hsfp=767778946&hsCtaTracking=0ffb8d9c-d8a0-466d-b54d-fea95f3c1ff3|68aa1b44-0969-440f-b2b5-b5f0efd769dc">
+                            10 Cool Outdoor Tech Gadgets •>
+                        </a>
+                    </li>
+                    <li>
+                      	<a class="module3__left__text__list__link" href="http://www.bestproducts.com/tech/gadgets/g1101/best-outdoor-tvs/?__hstc=120410007.4680427fa806afb68dbec9df1e6a799e.1479427123670.1479427123670.1479427123670.1&__hssc=120410007.1.1479427123670&__hsfp=767778946&hsCtaTracking=3b9522fe-16a5-4a86-8968-67bb5be98b2e%7C2dad7918-0348-408e-a381-1c054e7c8ac8">
+                            The Best Outdoor TVs For Your Deck or Patio •>
+                        </a>
+                    </li>
+                    <li>
+                      	<a class="module3__left__text__list__link" href="http://www.austinmonthly.com/AM/June-2016/High-Tech-for-Your-Deck/?__hstc=120410007.4680427fa806afb68dbec9df1e6a799e.1479427123670.1479427123670.1479427123670.1&__hssc=120410007.1.1479427123670&__hsfp=767778946&hsCtaTracking=5d4624c3-456d-4b72-bbe3-051a8e2b79ba%7C402eb48f-c176-487f-bc3f-404334cb890c">
+                            High Tech For Your Deck •>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="module3__right2">
+        </div>
+    </div>
+    
+    <!--------   module 3   -------->
+    
+    
+    <!--------   footer module   -------->
+    
+    <div class="footer">
+		<div class="footer__social">
+            <span style="white-space:nowrap">
+                <a class="footer__social__link" href="http://www.houzz.com/pro/timbertownusa">
+                <div class="footer__social__link__img houzz">
+                </div>
+                </a>
+                <a class="footer__social__link" href="https://www.facebook.com/TimbertownAustin">
+                <div class="footer__social__link__img facebook">
+                </div>
+                </a>
+                <a class="footer__social__link" href="https://twitter.com/timbertownatx">
+                <div class="footer__social__link__img twitter">
+                </div>
+                </a>
+            </span>
+            <span style="white-space:nowrap">
+                <a class="footer__social__link" href="https://plus.google.com/+Timbertownaustin">
+                <div class="footer__social__link__img google-plus">
+                </div>
+                </a>
+                <a class="footer__social__link" href="https://www.linkedin.com/company/timbertown-austin">
+                <div class="footer__social__link__img linkedin">
+                </div>
+                </a>
+                <a class="footer__social__link" href="https://www.pinterest.com/timbertownatx/">
+                <div class="footer__social__link__img pinterest">
+                </div>
+                </a>
+            </span>
+        </div>
+        <div class="footer__main">
+        	
+            <ul class="footer__main__category--mobile">
+            
+            	<div class="foot-left">
+           		<li class="footer__main__category__link">
+                	<div class="foot-wrap">
+                    	<div class="foot-wrap-title">
+                            <img class="footer__main__category__link__img" src="images/down.png" style="width:20px; height:15px;">
+                            <img class="footer__main__category__link__img2" src="images/up.png" style="width:20px; height:15px;">
+                            HARDWOODS
+                        </div>
+                        <ul class="footer__main__category__sub">
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Ipe
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Tigerwood
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Garapa
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Fijian Mahogany
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Cumaru
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Milling Profiles
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            	</li>
+                <li class="footer__main__category__link">
+                	<div class="foot-wrap">
+                    	<div class="foot-wrap-title">
+                        	<img class="footer__main__category__link__img" src="images/down.png" style="width:20px; height:15px;">
+                        	<img class="footer__main__category__link__img2" src="images/up.png" style="width:20px; height:15px;">
+                            COMPOSITES
+                        </div>
+                        <ul class="footer__main__category__sub">
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Azek
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Fiberon
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                TimberTech
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Trex
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Zuri
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            	</li>
+                <li class="footer__main__category__link">
+                	<div class="foot-wrap">
+                    	<div class="foot-wrap-title">
+                        	<img class="footer__main__category__link__img" src="images/down.png" style="width:20px; height:15px;">
+                        	<img class="footer__main__category__link__img2" src="images/up.png" style="width:20px; height:15px;">
+                            DECK FRAMING
+                        </div>
+                        <ul class="footer__main__category__sub">
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Wood
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Steel
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            	</li>
+                <li class="footer__main__category__link">
+                	<div class="foot-wrap">
+                    	<div class="foot-wrap-title">
+                        	<img class="footer__main__category__link__img" src="images/down.png" style="width:20px; height:15px;">
+                        	<img class="footer__main__category__link__img2" src="images/up.png" style="width:20px; height:15px;">
+                            RAILINGS
+                        </div>
+                        <ul class="footer__main__category__sub">
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Cable
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Composite
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Glass
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Metal
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Wood
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            	</li>
+                <li class="footer__main__category__link">
+                	<div class="foot-wrap">
+                    	<div class="foot-wrap-title">
+                        	<img class="footer__main__category__link__img" src="images/down.png" style="width:20px; height:15px;">
+                        	<img class="footer__main__category__link__img2" src="images/up.png" style="width:20px; height:15px;">
+                            ACCESSORIES
+                        </div>
+                        <ul class="footer__main__category__sub">
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Hardware & Fasteners
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Lattice
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">	
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Stains & Sealants
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Tools
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Kamado Joe
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            	</li>
+                <li class="footer__main__category__link">
+                	<div class="foot-wrap">
+                    	<div class="foot-wrap-title">
+                        	<img class="footer__main__category__link__img" src="images/down.png" style="width:20px; height:15px;">
+                        	<img class="footer__main__category__link__img2" src="images/up.png" style="width:20px; height:15px;">
+                            ABOUT
+                        </div>
+                        <ul class="footer__main__category__sub">
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Our Story
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Giving Back
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Sustainable Products
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Events & Workshops
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Delivery
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Hours & Locations
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Jobs
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            	</li>
+                </div>
+                
+                
+                
+                
+                
+                <div class="foot-right">
+                <li class="footer__main__category__link">
+                	<div class="foot-wrap">
+                    	<div class="foot-wrap-title">
+                        	<img class="footer__main__category__link__img" src="images/down.png" style="width:20px; height:15px;">
+                        	<img class="footer__main__category__link__img2" src="images/up.png" style="width:20px; height:15px;">
+                            SOFTWOODS
+                        </div>
+                        
+                        <ul class="footer__main__category__sub">
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Western Red Cedar
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Redwood
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Treated Yellow Pine
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            	</li>
+                <li class="footer__main__category__link">
+                	<div class="foot-wrap">
+                    	<div class="foot-wrap-title">
+                        	<img class="footer__main__category__link__img" src="images/down.png" style="width:20px; height:15px;">
+                        	<img class="footer__main__category__link__img2" src="images/up.png" style="width:20px; height:15px;">
+                            SIDING & SOFFITS
+                        </div>
+                        <ul class="footer__main__category__sub">
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Profiles & Patterns
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Weathered Products
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Real Soffit™
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Synergy
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Trespa
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            	</li>
+                <li class="footer__main__category__link">
+                	<div class="foot-wrap">
+                    	<div class="foot-wrap-title">
+                        	<img class="footer__main__category__link__img" src="images/down.png" style="width:20px; height:15px;">
+                        	<img class="footer__main__category__link__img2" src="images/up.png" style="width:20px; height:15px;">
+                            BEAMS
+                        </div>
+                        <ul class="footer__main__category__sub">
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Western Red Cedar
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Douglas Fir
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Treated Glulam
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Finishes
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            	</li>
+                <li class="footer__main__category__link">
+                	<div class="foot-wrap">
+                    	<div class="foot-wrap-title">
+                        	<img class="footer__main__category__link__img" src="images/down.png" style="width:20px; height:15px;">
+                        	<img class="footer__main__category__link__img2" src="images/up.png" style="width:20px; height:15px;">
+                            LIGHTING
+                        </div>
+                        <ul class="footer__main__category__sub">
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Deck
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Railing
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Stairs
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            	</li>
+                <li class="footer__main__category__link">
+                	<div class="foot-wrap">
+                    	<div class="foot-wrap-title">
+                        	<img class="footer__main__category__link__img" src="images/down.png" style="width:20px; height:15px;">
+                        	<img class="footer__main__category__link__img2" src="images/up.png" style="width:20px; height:15px;">
+                            RESOURCES
+                        </div>
+                        <ul class="footer__main__category__sub">
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Articles
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Photos
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Videos
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Featured Projects
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Product Guides
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Installation Guides
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Technical Guides
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Find A Craftsman
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            	</li>
+                
+                </div>
+                
+                
+        	</ul>
+            
+        	<ul class="footer__main__category--desktop">
+           		<li class="footer__main__category__link">
+                	<div class="foot-wrap">
+                    	<div class="foot-wrap-title-b">
+                            <img class="footer__main__category__link__img" src="http://www.fillmurray.com/15/15">
+                            HARDWOODS
+                        </div>
+                        <ul class="footer__main__category__sub">
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Ipe
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Tigerwood
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Garapa
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Fijian Mahogany
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Cumaru
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Milling Profiles
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            	</li>
+                <li class="footer__main__category__link">
+                	<div class="foot-wrap">
+                    	<div class="foot-wrap-title-b">
+                        	<img class="footer__main__category__link__img" src="http://www.fillmurray.com/15/15">
+                        	COMPOSITES
+                        </div>
+                        <ul class="footer__main__category__sub">
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Azek
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Fiberon
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                TimberTech
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Trex
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Zuri
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            	</li>
+                <li class="footer__main__category__link">
+                	<div class="foot-wrap">
+                    	<div class="foot-wrap-title-b">
+                        	<img class="footer__main__category__link__img" src="http://www.fillmurray.com/15/15">
+                        	DECK FRAMING
+                        </div>
+                        <ul class="footer__main__category__sub">
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Wood
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Steel
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            	</li>
+                <li class="footer__main__category__link">
+                	<div class="foot-wrap">
+                    	<div class="foot-wrap-title-b">
+                        	<img class="footer__main__category__link__img" src="http://www.fillmurray.com/15/15">
+                        	RAILINGS
+                        </div>
+                        <ul class="footer__main__category__sub">
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Cable
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Composite
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Glass
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Metal
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Wood
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            	</li>
+                <li class="footer__main__category__link">
+                	<div class="foot-wrap">
+                    	<div class="foot-wrap-title-b">
+                        	<img class="footer__main__category__link__img" src="http://www.fillmurray.com/15/15">
+                        	ACCESSORIES
+                        </div>
+                        <ul class="footer__main__category__sub">
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Hardware & Fasteners
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Lattice
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">	
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Stains & Sealants
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Tools
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Kamado Joe
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            	</li>
+                <li class="footer__main__category__link">
+                	<div class="foot-wrap">
+                    	<div class="foot-wrap-title-b">
+                        	<img class="footer__main__category__link__img" src="http://www.fillmurray.com/15/15">
+                        	ABOUT
+                        </div>
+                        <ul class="footer__main__category__sub">
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Our Story
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Giving Back
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Sustainable Products
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Events & Workshops
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Delivery
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Hours & Locations
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Jobs
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            	</li>
+                <li class="footer__main__category__link">
+                	<div class="foot-wrap">
+                    	<div class="foot-wrap-title-b">
+                        	<img class="footer__main__category__link__img" src="http://www.fillmurray.com/15/15">
+                        	SOFTWOODS
+                        </div>
+                        
+                        <ul class="footer__main__category__sub">
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Western Red Cedar
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Redwood
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Treated Yellow Pine
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            	</li>
+                <li class="footer__main__category__link">
+                	<div class="foot-wrap">
+                    	<div class="foot-wrap-title-b">
+                        	<img class="footer__main__category__link__img" src="http://www.fillmurray.com/15/15">
+                        	SIDING & SOFFITS
+                        </div>
+                        <ul class="footer__main__category__sub">
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Profiles & Patterns
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Weathered Products
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Real Soffit™
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Synergy
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Trespa
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            	</li>
+                <li class="footer__main__category__link">
+                	<div class="foot-wrap">
+                    	<div class="foot-wrap-title-b">
+                        	<img class="footer__main__category__link__img" src="http://www.fillmurray.com/15/15">
+                        	BEAMS
+                        </div>
+                        <ul class="footer__main__category__sub">
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Western Red Cedar
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Douglas Fir
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Treated Glulam
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Finishes
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            	</li>
+                <li class="footer__main__category__link">
+                	<div class="foot-wrap">
+                    	<div class="foot-wrap-title-b">
+                        	<img class="footer__main__category__link__img" src="http://www.fillmurray.com/15/15">
+                        	LIGHTING
+                        </div>
+                        <ul class="footer__main__category__sub">
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Deck
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Railing
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Stairs
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            	</li>
+                <li class="footer__main__category__link">
+                	<div class="foot-wrap">
+                    	<div class="foot-wrap-title-b">
+                        	<img class="footer__main__category__link__img" src="http://www.fillmurray.com/15/15">
+                        	RESOURCES
+                        </div>
+                        <ul class="footer__main__category__sub">
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Articles
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Photos
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Videos
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Featured Projects
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Product Guides
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Installation Guides
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Technical Guides
+                                </a>
+                            </li>
+                            <li class="footer__main__category__sub__item">
+                            	<a class="footer__main__category__sub__item__link" href="https://www.google.com/">
+                                Find A Craftsman
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            	</li>
+        	</ul>
+        </div>
+        <div class="footer__foot">
+        	<span style="white-space:nowrap">Copyright 2016 TimberTown USA.</span>  <span style="white-space:nowrap">All Rights Reserved.</span>  <a class="footer__foot__link" href="https://www.google.com/"><span style="white-space:nowrap">Privacy Policy</span></a>
+        </div>
+    </div>
+    
+    
+    
+    
+        <script type="text/javascript">
+
+
+
+	$(document).ready(function(){
+		$('.foot-wrap-title').on("click", function(e){
+			if($(this).hasClass('active')){
+				$(this).parent().find('.footer__main__category__sub').hide();
+				$(this).removeClass('active');
+			} else {
+				$(this).parent().parent().parent().parent().find('.footer__main__category__sub').hide();
+				$(this).parent().parent().parent().find('.active').removeClass('active');
+				$(this).addClass('active');
+				$(this).parent().find('.footer__main__category__sub').show();
+			}
+			e.preventDefault();
+			return true;
+		});
+    	$('.footer__main__category__sub li').on("click", function(e){
+			e.stopPropagation();
+    	});
+		
+
+	});
+	
+	
+	$(document).ready(function(){
+		$('.foot-wrap-title').on("click", function(e){
+			if(jQuery(this).hasClass('active')){
+				jQuery(this).parent().parent().parent().parent().find('.footer__main__category__link__img2').hide();
+				jQuery(this).parent().parent().parent().parent().find('.footer__main__category__link__img').show();
+				jQuery(this).find('.footer__main__category__link__img').hide();
+				jQuery(this).find('.footer__main__category__link__img2').show();
+				
+			} else {
+				jQuery(this).find('.footer__main__category__link__img2').hide();
+				jQuery(this).find('.footer__main__category__link__img').show();
+			}
+			e.preventDefault();
+			return true;
+		});
+    	
+		
+
+	});
+	
+	
+	
+	
+</script>
+    
+    
+    <!--------   footer module   -------->
+    
+    
+    
+</body>
+</html>
+
+
+
+    
+  
